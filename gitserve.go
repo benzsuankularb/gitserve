@@ -33,5 +33,6 @@ func main() {
 	}
 	data := []byte("#!/bin/sh\ngit --work-tree=" + workDir + " --git-dir=" + gitDir + " checkout -f")
 	ioutil.WriteFile(gitDir+"/hooks/post-receive", data, 777)
-	fmt.Println("SUCCESSFULL")
+	fmt.Println("Setup Done, .git directory is locate at :")
+	fmt.Println(gitDir)
 }
